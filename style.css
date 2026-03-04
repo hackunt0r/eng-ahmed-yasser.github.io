@@ -1,201 +1,105 @@
-:root {
-    /* Deep Professional Palette */
-    --bg-main: #0a0c10;           /* Deep midnight black */
-    --bg-secondary: #11141b;      /* Slightly lighter dark for contrast */
-    --card-bg: #161b22;           /* Professional slate for cards */
-    --accent-color: #00d2ff;      /* Sharp Cyan for a tech feel */
-    --text-primary: #e6edf3;      /* Off-white for readability */
-    --text-secondary: #8b949e;    /* Dimmed text for descriptions */
-    --border-color: #30363d;      /* Subtle border color */
+/* Add these missing styles to your existing CSS */
+
+/* Fix for section IDs to match navigation */
+#about, #skills, #contact {
+    scroll-margin-top: 80px; /* Prevents nav bar from covering section titles */
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Better responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    section {
+        padding: 4rem 5%;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
 }
 
-body {
-    background: radial-gradient(circle at top right, var(--bg-secondary), var(--bg-main));
-    color: var(--text-primary);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.7;
-    overflow-x: hidden;
+@media (max-width: 480px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* Glassmorphism Navigation */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem 10%;
-    background: rgba(10, 12, 16, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* Font Awesome icon spacing */
+.social-links i, .btn i {
+    margin-right: 8px;
 }
 
-.logo {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 800;
-    font-size: 1.4rem;
-    color: var(--accent-color);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: var(--accent-color);
-}
-
-/* Hero Section */
-header {
-    text-align: center;
-    padding: 8rem 10% 4rem;
-}
-
+/* Animation for profile image */
 .profile-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 2px solid var(--accent-color);
-    padding: 5px;
-    background: var(--bg-main);
-    margin-bottom: 2rem;
-    box-shadow: 0 0 30px rgba(0, 210, 255, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-h1 {
-    font-size: 3.5rem;
-    letter-spacing: -1px;
-    margin-bottom: 0.5rem;
+.profile-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 40px rgba(0, 210, 255, 0.3);
 }
 
-.subtitle {
-    font-size: 1.3rem;
-    color: var(--accent-color);
-    font-weight: 300;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-}
-
-.tagline {
-    max-width: 600px;
-    margin: 0 auto;
-    color: var(--text-secondary);
-    font-style: italic;
-}
-
-/* Sections */
-section {
-    padding: 6rem 10%;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 3rem;
+/* Cyber security themed glitch effect for logo (optional) */
+.logo {
     position: relative;
     display: inline-block;
 }
 
-h2::after {
+.logo:hover {
+    animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Add this to your CSS file */
+nav a.active {
+    color: var(--accent-color);
+    position: relative;
+}
+
+nav a.active::after {
     content: '';
     position: absolute;
+    bottom: -5px;
     left: 0;
-    bottom: -10px;
-    width: 40px;
-    height: 4px;
+    width: 100%;
+    height: 2px;
     background: var(--accent-color);
     border-radius: 2px;
-}
-
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.skill-card {
-    background: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-}
-
-.skill-card:hover {
-    border-color: var(--accent-color);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.skill-card h3 {
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
-/* Button & Links */
-.social-links {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.social-links a {
-    color: var(--text-primary);
-    text-decoration: none;
-    border: 1px solid var(--border-color);
-    padding: 0.5rem 1.2rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    background: var(--accent-color);
-    color: var(--bg-main);
-    border-color: var(--accent-color);
-}
-
-.btn {
-    display: inline-block;
-    background: var(--accent-color);
-    color: var(--bg-main);
-    padding: 1.2rem 2.5rem;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 4px;
-    letter-spacing: 1px;
-    transition: 0.4s;
-    text-transform: uppercase;
-}
-
-.btn:hover {
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.5);
-    transform: scale(1.02);
-}
-
-footer {
-    text-align: center;
-    padding: 4rem;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-secondary);
-    font-size: 0.9rem;
 }
