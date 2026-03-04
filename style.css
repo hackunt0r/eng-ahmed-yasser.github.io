@@ -1,3 +1,14 @@
+/* Fixed: Added missing variable definitions */
+:root {
+    --bg-main: #0a0c10;
+    --bg-secondary: #11141b;
+    --card-bg: #161b22;
+    --accent-color: #00d2ff;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --border-color: #30363d;
+}
+
 /* --- DEFENSIVE SECURITY MATRIX STYLES --- */
 
 .defensive-section {
@@ -38,7 +49,6 @@
     letter-spacing: 1px;
 }
 
-/* Progress Bar Styling */
 .progress-bar {
     width: 200px;
     height: 8px;
@@ -54,7 +64,6 @@
     box-shadow: 0 0 10px var(--accent-color);
 }
 
-/* Skills Tags/Pills Styling */
 .skills-tags {
     display: flex;
     flex-wrap: wrap;
@@ -71,7 +80,6 @@
     transition: all 0.3s ease;
 }
 
-/* Highlighting SOC & Network Focus (Green) */
 .skills-tags span.high-focus {
     border-color: #39FF14;
     color: #39FF14;
