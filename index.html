@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed Yasser | Junior SOC Analyst</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fixed: Added proper Font Awesome CDN -->
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Fixed: Added Inter font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -20,10 +20,9 @@
         </ul>
     </nav>
 
-    <header id="home">  <!-- Fixed: Added ID for potential future use -->
+    <header id="home">
         <div class="header-container">
-            <!-- Fixed: Check if image exists, added fallback -->
-            <img src="Me_Comp.png" alt="Ahmed Yasser" class="profile-img" onerror="this.src='https://via.placeholder.com/200x200?text=AY'">
+            <img src="Me.png" alt="Ahmed Yasser" class="profile-img" onerror="this.src='https://via.placeholder.com/200x200?text=AY'">
             <h1>Ahmed Yasser</h1>
             <p class="subtitle">Junior SOC Analyst</p>
             <p class="tagline">"Monitoring the Shadows, Securing the Future."</p>
@@ -37,27 +36,162 @@
     <section id="about">
         <h2>Professional Mission</h2>
         <p>In an era of rapidly escalating cyber warfare and complex digital threats, my mission is to build resilient defense architectures. I am dedicated to proactive monitoring and rapid incident response to safeguard critical infrastructure from modern adversaries.</p>
-        <p><strong>Location:</strong> Nasr City, Cairo, Egypt</p>
-        <p><strong>Education:</strong> Student at New Cairo Technology University</p>
+        <div class="about-details">
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Nasr City, Cairo, Egypt</p>
+            <p><i class="fas fa-graduation-cap"></i> <strong>Education:</strong> Student at New Cairo Technology University</p>
+            <p><i class="fas fa-certificate"></i> <strong>Certifications:</strong> IBM QRadar, SIEM Specialist, Network Security</p>
+        </div>
     </section>
 
     <section id="skills">
         <h2>Technical Arsenal</h2>
-        <div class="skills-grid">
-            <div class="skill-card"><h3>Network Security</h3><p>Network+, Nmap, Traffic Analysis</p></div>
-            <div class="skill-card"><h3>Web Defense</h3><p>HTML, JS, Web Basics, OWASP Top 10</p></div>
-            <div class="skill-card"><h3>System Admin</h3><p>Linux (Kali), Bash, Python Automation</p></div>
+        <p class="skills-intro">Specialized in security operations, threat detection, and incident response with hands-on experience in enterprise-grade security tools.</p>
+        
+        <!-- System Administration & Core Security -->
+        <div class="skills-category">
+            <h3><i class="fas fa-shield-halved"></i> System & Security Administration</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-linux"></i>
+                    <h3>Linux System Administration</h3>
+                    <p>Advanced Linux system management, hardening, and security configuration</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>System Administration</h3>
+                    <p>Comprehensive system maintenance, user management, and security policies</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SIEM & Security Tools -->
+        <div class="skills-category">
+            <h3><i class="fas fa-chart-pie"></i> SIEM & Security Monitoring</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-dashboard"></i>
+                    <h3>IBM QRadar</h3>
+                    <p>Expert in QRadar SIEM configuration, rule creation, and incident detection</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Security Information and Event Management (SIEM)</h3>
+                    <p>Log correlation, real-time monitoring, and threat detection</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-lines"></i>
+                    <h3>Log Analysis</h3>
+                    <p>Deep dive log analysis, pattern recognition, and anomaly detection</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Network Security & Analysis -->
+        <div class="skills-category">
+            <h3><i class="fas fa-network-wired"></i> Network Security & Analysis</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-shield"></i>
+                    <h3>Network Security</h3>
+                    <p>Firewall configuration, IDS/IPS, and network defense strategies</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Wireshark</h3>
+                    <p>Packet analysis, protocol inspection, and network forensics</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Tcpdump</h3>
+                    <p>Command-line packet capture and analysis</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Nmap</h3>
+                    <p>Network discovery, vulnerability scanning, and security auditing</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Programming & Automation -->
+        <div class="skills-category">
+            <h3><i class="fas fa-code"></i> Programming & Automation</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Security automation, tool development, and scripting</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-terminal"></i>
+                    <h3>Bash</h3>
+                    <p>Shell scripting, automation, and system administration</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Threat Intelligence & Forensics -->
+        <div class="skills-category">
+            <h3><i class="fas fa-brain"></i> Threat Intelligence & Forensics</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-skull"></i>
+                    <h3>Cyber Threat Intelligence (CTI)</h3>
+                    <p>Threat hunting, IOC analysis, and intelligence gathering</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Phishing Analysis</h3>
+                    <p>Email analysis, phishing campaign detection, and user awareness</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Forensic Analysis</h3>
+                    <p>Digital forensics, evidence collection, and incident investigation</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Tags / Quick Overview -->
+        <div class="skills-tags-container">
+            <h3>Core Competencies</h3>
+            <div class="skills-tags">
+                <span class="skill-tag">Linux System Administration</span>
+                <span class="skill-tag">SIEM</span>
+                <span class="skill-tag">IBM QRadar</span>
+                <span class="skill-tag">Bash</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Wireshark</span>
+                <span class="skill-tag">Tcpdump</span>
+                <span class="skill-tag">Nmap</span>
+                <span class="skill-tag">Network Security</span>
+                <span class="skill-tag">Log Analysis</span>
+                <span class="skill-tag">Phishing Analysis</span>
+                <span class="skill-tag">CTI</span>
+                <span class="skill-tag">Forensic Analysis</span>
+                <span class="skill-tag">System Administration</span>
+                <span class="skill-tag">Threat Hunting</span>
+                <span class="skill-tag">Incident Response</span>
+            </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Get In Touch</h2>
-        <p>Interested in collaborating on a security project?</p>
-        <a href="mailto:ahmedyasser010101000@gmail.com" class="btn"><i class="fas fa-envelope"></i> Establish Connection</a>
+        <p>Interested in collaborating on a security project or need a SOC analyst?</p>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:ahmedyasser010101000@gmail.com">ahmedyasser010101000@gmail.com</a></p>
+        </div>
+        <a href="mailto:ahmedyasser010101000@gmail.com" class="btn"><i class="fas fa-shield"></i> Establish Secure Connection</a>
     </section>
 
     <footer>
-        <p>&copy; 2026 Hackunter. All rights reserved.</p>
+        <p>&copy; 2026 Hackunter. All rights reserved. | Junior SOC Analyst</p>
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
