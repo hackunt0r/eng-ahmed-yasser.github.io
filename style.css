@@ -1,105 +1,88 @@
-/* Fixed: Added missing variable definitions */
 :root {
-    --bg-main: #0a0c10;
-    --bg-secondary: #11141b;
-    --card-bg: #161b22;
-    --accent-color: #00d2ff;
-    --text-primary: #e6edf3;
-    --text-secondary: #8b949e;
-    --border-color: #30363d;
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --accent-color: #06b6d4;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
 }
 
-/* --- DEFENSIVE SECURITY MATRIX STYLES --- */
-
-.defensive-section {
-    padding: 6rem 10%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.defensive-matrix {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.section-title {
-    margin-bottom: 2.5rem;
+body {
+    background-color: var(--bg-color);
     color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
 }
 
-.skill-tier {
-    margin-bottom: 2.5rem;
-}
-
-.tier-header {
+nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
+    padding: 1.5rem 10%;
+    background: rgba(15, 23, 42, 0.9);
+    position: sticky;
+    top: 0;
 }
 
-.tier-label {
+.logo {
+    font-weight: bold;
     color: var(--accent-color);
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
-.progress-bar {
-    width: 200px;
-    height: 8px;
-    background: #0d1117;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
+header {
+    text-align: center;
+    padding: 5rem 10%;
 }
 
-.progress-fill {
-    height: 100%;
-    background: var(--accent-color);
-    box-shadow: 0 0 10px var(--accent-color);
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 1.5rem;
+    object-fit: cover;
 }
 
-.skills-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--accent-color);
 }
 
-.skills-tags span {
-    background: rgba(48, 54, 61, 0.3);
-    border: 1px solid var(--border-color);
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-size: 0.85rem;
+.tagline {
+    font-style: italic;
     color: var(--text-secondary);
-    transition: all 0.3s ease;
 }
 
-.skills-tags span.high-focus {
-    border-color: #39FF14;
-    color: #39FF14;
-    background: rgba(57, 255, 20, 0.05);
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 10%;
 }
 
-.skills-tags span:hover {
-    border-color: var(--accent-color);
-    color: var(--text-primary);
-    transform: translateY(-2px);
-    background: rgba(0, 210, 255, 0.1);
+.skill-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
 }
 
-@media (max-width: 768px) {
-    .tier-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    .progress-bar {
-        width: 100%;
-    }
+.btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: 0.3s;
 }
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
+}
+
+section { padding: 4rem 10%; }
+h2 { border-bottom: 2px solid var(--accent-color); display: inline-block; margin-bottom: 2rem; }
