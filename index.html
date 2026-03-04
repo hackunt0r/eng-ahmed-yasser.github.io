@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed Yasser | Junior SOC Analyst</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -19,7 +19,7 @@
 
     <header>
         <div class="header-container">
-            <img src="Me.png" alt="Ahmed Yasser" class="profile-img">
+            <img src="Me_Comp.png" alt="Ahmed Yasser" class="profile-img">
             <h1>Ahmed Yasser</h1>
             <p class="subtitle">Junior SOC Analyst</p>
             <p class="tagline">"Monitoring the Shadows, Securing the Future."</p>
@@ -37,41 +37,55 @@
         <p><strong>Education:</strong> Student at New Cairo Technology University</p>
     </section>
 
-<section class="skills-section">
-    <h2>Technical Arsenal</h2>
-    
-    <div class="skills-category">
-        <h3><i class="fas fa-shield-alt"></i> SOC & Monitoring</h3>
-        <div class="skills-tags">
-            <span>Splunk (SIEM)</span> <span>Log Analysis</span> <span>Incident Response</span> 
-            <span>Blue Teaming</span> <span>Threat Hunting</span> <span>Security Events</span>
-        </div>
-    </div>
+    <section id="skills" class="defensive-matrix">
+        <h2 class="section-title"><i class="fas fa-user-shield"></i> Defensive Security Matrix</h2>
 
-    <div class="skills-category">
-        <h3><i class="fas fa-network-wired"></i> Network Forensics</h3>
-        <div class="skills-tags">
-            <span>Wireshark</span> <span>Nmap</span> <span>TCP/IP</span> 
-            <span>Traffic Analysis</span> <span>Snort</span> <span>Zeek</span>
+        <div class="skill-tier">
+            <div class="tier-header">
+                <span class="tier-label">Blue Team Operations</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+            </div>
+            <div class="skills-tags">
+                <span class="high-focus">Splunk (SIEM)</span>
+                <span class="high-focus">Log Ingestion & Analysis</span>
+                <span>Incident Response</span>
+                <span>Threat Detection</span>
+                <span>SIEM Dashboarding</span>
+                <span>Security Event Monitoring</span>
+            </div>
         </div>
-    </div>
 
-    <div class="skills-category">
-        <h3><i class="fas fa-bug"></i> Offensive Security</h3>
-        <div class="skills-tags">
-            <span>Kali Linux</span> <span>OWASP Top 10</span> <span>Burp Suite</span> 
-            <span>Vulnerability Assessment</span> <span>Web Pentesting</span> <span>IDOR/XSS</span>
+        <div class="skill-tier">
+            <div class="tier-header">
+                <span class="tier-label">Network Forensics & Security</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+            </div>
+            <div class="skills-tags">
+                <span class="high-focus">Wireshark (Packet Analysis)</span>
+                <span class="high-focus">Nmap (Network Scanning)</span>
+                <span>TCP/IP Protocols</span>
+                <span>Snort (IDS/IPS)</span>
+                <span>Traffic Filtering</span>
+                <span>Zeek</span>
+            </div>
         </div>
-    </div>
 
-    <div class="skills-category">
-        <h3><i class="fas fa-code"></i> Engineering & Ops</h3>
-        <div class="skills-tags">
-            <span>Bash Scripting</span> <span>Python Automation</span> <span>Linux Admin</span> 
-            <span>Git/GitHub</span> <span>HTML/CSS</span> <span>System Hardening</span>
+        <div class="skill-tier">
+            <div class="tier-header">
+                <span class="tier-label">Infrastructure Defense</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+            </div>
+            <div class="skills-tags">
+                <span>Linux Hardening (Kali/Debian)</span>
+                <span>SSH Security</span>
+                <span>User Access Control</span>
+                <span>Firewall Management</span>
+                <span>Bash Scripting for Security</span>
+                <span>Log Monitoring (auth.log)</span>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <section id="contact">
         <h2>Get In Touch</h2>
         <p>Interested in collaborating on a security project?</p>
