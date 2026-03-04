@@ -1,5 +1,4 @@
 :root {
-    /* Professional Defensive Palette */
     --bg-main: #0a0c10;
     --bg-secondary: #11141b;
     --card-bg: #161b22;
@@ -10,11 +9,7 @@
     --border-color: #30363d;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     background: radial-gradient(circle at top right, var(--bg-secondary), var(--bg-main));
@@ -38,6 +33,10 @@ nav {
     z-index: 1000;
 }
 
+nav ul { display: flex; list-style: none; gap: 2rem; }
+nav a { text-decoration: none; color: var(--text-secondary); transition: 0.3s; }
+nav a:hover { color: var(--accent-blue); }
+
 .logo {
     font-family: 'Courier New', monospace;
     font-weight: 800;
@@ -46,14 +45,10 @@ nav {
 }
 
 /* --- HERO SECTION --- */
-header {
-    text-align: center;
-    padding: 6rem 10% 2rem;
-}
+header { text-align: center; padding: 6rem 10% 2rem; }
 
 .profile-img {
-    width: 180px;
-    height: 180px;
+    width: 180px; height: 180px;
     border-radius: 50%;
     border: 2px solid var(--accent-blue);
     padding: 5px;
@@ -61,85 +56,42 @@ header {
     box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
 }
 
+.social-links { margin-top: 1rem; display: flex; justify-content: center; gap: 1rem; }
+.social-links a { 
+    color: var(--accent-blue); 
+    text-decoration: none; 
+    border: 1px solid var(--border-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
 h1 { font-size: 3rem; margin-bottom: 0.5rem; }
 .subtitle { color: var(--accent-blue); letter-spacing: 2px; font-weight: 300; }
 
-/* --- DEFENSIVE MATRIX SECTION (The Focus) --- */
-.defensive-section {
-    padding: 4rem 10%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.defensive-matrix {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 40px;
-    border-radius: 12px;
-}
-
+/* --- DEFENSIVE MATRIX --- */
+.defensive-section { padding: 4rem 10%; max-width: 1100px; margin: auto; }
+.defensive-matrix { background: var(--card-bg); border: 1px solid var(--border-color); padding: 40px; border-radius: 12px; }
 .skill-tier { margin-bottom: 40px; }
+.tier-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.tier-label { color: var(--accent-blue); font-family: 'Courier New', monospace; font-weight: bold; text-transform: uppercase; }
+.progress-bar { width: 150px; height: 6px; background: #0d1117; border-radius: 3px; }
+.progress-fill { height: 100%; background: var(--accent-blue); box-shadow: 0 0 8px var(--accent-blue); }
 
-.tier-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
+.skills-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.skills-tags span { background: rgba(22, 27, 34, 0.8); border: 1px solid var(--border-color); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; color: var(--text-secondary); }
+.skills-tags span.high-focus { border-color: var(--alert-green); color: var(--alert-green); }
 
-.tier-label {
-    color: var(--accent-blue);
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.progress-bar {
-    width: 150px;
-    height: 6px;
-    background: #0d1117;
-    border-radius: 3px;
-}
-
-.progress-fill {
-    height: 100%;
+/* --- BUTTON --- */
+.btn {
+    display: inline-block;
     background: var(--accent-blue);
-    box-shadow: 0 0 8px var(--accent-blue);
+    color: #000;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 1rem;
 }
 
-.skills-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skills-tags span {
-    background: rgba(22, 27, 34, 0.8);
-    border: 1px solid var(--border-color);
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    transition: 0.3s;
-}
-
-/* Highlighting Blue Team/Network focus */
-.skills-tags span.high-focus {
-    border-color: var(--alert-green);
-    color: var(--alert-green);
-    background: rgba(57, 255, 20, 0.05);
-}
-
-.skills-tags span:hover {
-    border-color: var(--accent-blue);
-    color: var(--text-primary);
-    transform: translateY(-2px);
-}
-
-/* --- FOOTER --- */
-footer {
-    text-align: center;
-    padding: 3rem;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-secondary);
-}
+footer { text-align: center; padding: 3rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); }
