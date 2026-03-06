@@ -6,10 +6,34 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  
+  // ضبط الموافقة الافتراضية على الرفض حتى يتم تحميل الصفحة
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied'
+  });
+
   gtag('js', new Date());
 
-  gtag('config', 'G-Q998V82SPM');
+  // إرسال الإعدادات بعد التأكد من تحميل الصفحة
+  gtag('config', 'G-Q998V82SPM', {
+    'send_page_view': true
+  });
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <meta charset="UTF-8">
